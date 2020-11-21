@@ -1,9 +1,11 @@
 package com.example.demo.datajpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.*;
 
 import java.lang.reflect.Type;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,5 +44,12 @@ public class UserController {
     @ResponseBody
     public void deleteUser(@PathVariable long userId) {
         userRepository.deleteById(userId);
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @ResponseBody
+    public List<User> findUserByFirstName(@RequestParam String Name, @RequestParam(defaultValue = "0") int type) {
+        if(type == 0) return userRepository.myFindByFirstName(Name);
+        else return userRepository.findByLastName(Name);
     }
 }
