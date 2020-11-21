@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.datajpa.TestRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

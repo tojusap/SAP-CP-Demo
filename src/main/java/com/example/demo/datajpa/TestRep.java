@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.datajpa;
 
 import com.example.demo.datajpa.TestEntity;
 import org.springframework.data.repository.CrudRepository;

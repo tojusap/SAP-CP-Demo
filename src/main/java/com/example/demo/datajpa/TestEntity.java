@@ -1,6 +1,5 @@
 package com.example.demo.datajpa;
 
-
 import javax.persistence.*;
 
 /**
@@ -14,4 +13,6 @@ public class TestEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String name;
 }
